@@ -1,1 +1,15 @@
 <h1>My portfolio</h1>
+
+<h3>Search Stock</h3>
+<div id="stock-lookup">
+<%= form_with method: :get, url: stocks_search_path do |f| %>
+    <div class="form group">
+        <%= f.text_field :Search, class: "form-control" %>
+        <%= f.submit "Search", class: "btn btn-lg btn-success form-control" %>
+    </div>
+<% end %>
+</div>
+
+<h2><%= @stock.name %></h2>
+<h3><%= @stock.ticker %></h3>
+<h4><%= @stock.last_price %></h4>
