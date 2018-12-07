@@ -1,4 +1,6 @@
 class Stock < ApplicationRecord
+has_many :user_stocks
+has_many :users, through: :user_stocks
     def self.search_ticker(ticker_name)
         get_ticker = StockQuote::Stock.quote(ticker_name)
         if get_ticker.nil?
