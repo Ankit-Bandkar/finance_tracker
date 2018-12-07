@@ -1,5 +1,6 @@
 <h1>My portfolio</h1>
-
+<div id="error" align="center">
+</div>
 <h3>Search Stock</h3>
 <div id="stock-lookup">
 <%= form_with method: :get, url: stocks_search_path do |f| %>
@@ -10,6 +11,5 @@
 <% end %>
 </div>
 
-<h2><%= @stock.name %></h2>
-<h3><%= @stock.ticker %></h3>
-<h4><%= @stock.last_price %></h4>
+<div id="result">
+</div>
